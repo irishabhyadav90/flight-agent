@@ -1,4 +1,5 @@
 import { Agent } from '@mastra/core/agent';
+import { Memory } from "@mastra/memory";
 import { airportSearchTool, flightSearchTool } from '../tools/flight-search.tool';
 
 export const flightAgent = new Agent({
@@ -37,4 +38,5 @@ model: "groq/llama-3.3-70b-versatile",
     airportSearchTool,
     flightSearchTool,
   },
+  memory: new Memory(),
 });
